@@ -21,3 +21,11 @@
   --font-sans: "Inter", system-ui, sans-serif;
   --radius: 4px;
 }
+
+@font-face {
+  font-family: "Source Sans 3";
+  src:
+    local("Source Sans 3"),
+    url("font\Source_Sans_3") format("woff2");
+  font-display: swap;
+}

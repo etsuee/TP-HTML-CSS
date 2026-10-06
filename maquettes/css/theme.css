@@ -18,7 +18,7 @@
   --color-primary-hover: #b66c34;
   --color-primary-soft: #fffbeb;
   --color-focus: #b45309;
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-sans: "Source Sans 3", "Inter", system-ui, sans-serif;
   --radius: 4px;
 }
 
@@ -26,6 +26,6 @@
   font-family: "Source Sans 3";
   src:
     local("Source Sans 3"),
-    url("font\Source_Sans_3") format("woff2");
+    url("font\Source_Sans_3") format("ttf");
   font-display: swap;
 }

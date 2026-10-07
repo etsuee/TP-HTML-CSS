@@ -9,44 +9,252 @@
       name="description"
       content="Documentation guide de style TechCorp RH"
     />
-
     <meta name="robots" content="noindex, nofollow" />
     <meta name="theme-color" content="#1d4ed8" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-
     <link rel="stylesheet" href="css/main.css" />
+
+    <style>
+      .container {
+        padding: var(--space-6) var(--space-4);
+      }
+      .color-card-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-3);
+        width: auto;
+      }
+      .cd {
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius);
+        overflow: hidden;
+        background: var(--color-surface);
+        flex: 1 1 10rem;
+      }
+      .cd__color {
+        height: 4rem;
+      }
+      .cd__label {
+        padding: var(--space-3);
+        font-size: var(--text-base);
+      }
+      .space-bar {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+      }
+      .space-bar span:first-child {
+        background: var(--color-primary);
+        height: 1rem;
+      }
+      .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: var(--space-3);
+      }
+    </style>
   </head>
   <body>
     <header></header>
-    <main>
+    <main class="container">
       <h1>Design system TechCorp RH</h1>
 
-      <section id="section-couleurs">
-        <div>
-          <h2>Couleur sémantiques</h2>
+      <!-- =================== Section Couleurs =================== -->
+      <section aria-labelledby="section-couleurs">
+        <h2>Couleur sémantiques</h2>
+        <div class="color-card-wrapper">
+          <div class="cd">
+            <div
+              class="cd__color"
+              style="background: var(--color-primary)"
+            ></div>
+            <p class="cd__label">--color-primary</p>
+          </div>
 
-          <div></div>
+          <div class="cd">
+            <div
+              class="cd__color"
+              style="background: var(--color-primary-soft)"
+            ></div>
+            <p class="cd__label">--color-primary-soft</p>
+          </div>
+
+          <div class="cd">
+            <div class="cd__color" style="background: var(--color-text)"></div>
+            <p class="cd__label">--color-text</p>
+          </div>
+
+          <div class="cd">
+            <div
+              class="cd__color"
+              style="background: var(--color-text-muted)"
+            ></div>
+            <p class="cd__label">--color-text-muted</p>
+          </div>
+
+          <div class="cd">
+            <div class="cd__color" style="background: var(--color-bg)"></div>
+            <p class="cd__label">--color-bg</p>
+          </div>
+
+          <div class="cd">
+            <div
+              class="cd__color"
+              style="background: var(--color-border-input)"
+            ></div>
+            <p class="cd__label">--color-border-input</p>
+          </div>
+
+          <div class="cd">
+            <div
+              class="cd__color"
+              style="background: var(--color-success)"
+            ></div>
+            <p class="cd__label">--color-success</p>
+          </div>
+
+          <div class="cd">
+            <div
+              class="cd__color"
+              style="background: var(--color-warning)"
+            ></div>
+            <p class="cd__label">--color-warning</p>
+          </div>
+
+          <div class="cd">
+            <div
+              class="cd__color"
+              style="background: var(--color-danger)"
+            ></div>
+            <p class="cd__label">--color-danger</p>
+          </div>
         </div>
       </section>
-      <section id="section-typo"></section>
-      <section id="section-espacement"></section>
-      <section id="section-boutons"></section>
-      <section id="section-badges"></section>
+
+      <!-- =================== Section Typographie =================== -->
+      <section aria-labelledby="section-typo">
+        <h2>Typographie</h2>
+        <div>
+          <p style="font-size: var(--text-3xl)" class="font-semibold">
+            --text-3xl : Titre de page desktop
+          </p>
+          <p style="font-size: var(--text-2xl)" class="font-semibold">
+            --text-2xl : Titre de page mobile
+          </p>
+          <p style="font-size: var(--text-xl)" class="font-semibold">
+            --text-xl : Titre de section
+          </p>
+          <p style="font-size: var(--text-lg)" class="font-semibold">
+            --text-lg : Titre de carte
+          </p>
+          <p>--text-base : Texte courant, 16px, interligne 1.5.</p>
+          <p class="text-sm text-muted">
+            --text-sm : Aide, métadonnées, contenu de tableau.
+          </p>
+          <p style="font-size: var(--text-xs)">
+            --text-xs : Badges, en-têtes de tableau.
+          </p>
+        </div>
+      </section>
+
+      <!-- =================== Section Espacements =================== -->
+      <section aria-labelledby="section-espacement">
+        <h2>Espacements</h2>
+        <div>
+          <div class="space-bar">
+            <span style="width: var(--space-1)"></span>--space-1 : 4px
+          </div>
+
+          <div class="space-bar">
+            <span style="width: var(--space-2)"></span>--space-2 : 8px
+          </div>
+
+          <div class="space-bar">
+            <span style="width: var(--space-3)"></span>--space-3 : 12px
+          </div>
+
+          <div class="space-bar">
+            <span style="width: var(--space-4)"></span>--space-4 : 16px
+          </div>
+
+          <div class="space-bar">
+            <span style="width: var(--space-5)"></span>--space-5 : 24px
+          </div>
+
+          <div class="space-bar">
+            <span style="width: var(--space-6)"></span>--space-6 : 32px
+          </div>
+
+          <div class="space-bar">
+            <span style="width: var(--space-7)"></span>--space-7 : 48px
+          </div>
+
+          <div class="space-bar">
+            <span style="width: var(--space-8)"></span>--space-8 : 64px
+          </div>
+        </div>
+      </section>
+
+      <!-- =================== Section Boutons =================== -->
+      <section aria-labelledby="section-boutons">
+        <h2>Boutons</h2>
+        <div class="wrapper">
+          <div class="btn btn--primary" type="button">Bouton Primaire</div>
+          <div class="btn btn--secondary" type="button">Bouton Secondaire</div>
+          <div class="btn btn--danger" type="button">Bouton Danger</div>
+          <div class="btn btn--ghost" type="button">Bouton Discret</div>
+          <div class="btn btn--primary btn--sm" type="button">Bouton petit</div>
+          <div class="btn btn--primary" type="button" disabled>
+            Bouton Désactivé
+          </div>
+        </div>
+      </section>
+
+      <!-- =================== Section Badges =================== -->
+      <section aria-labelledby="section-badges">
+        <h2>Badges</h2>
+        <div class="wrapper">
+          <span class="badge badge--pending">En attente Manager</span>
+          <span class="badge badge--in-progress">En attente RH</span>
+          <span class="badge badge--approved">Validée</span>
+          <span class="badge badge--rejected">Refusée</span>
+          <span class="badge badge--refunded">Remboursé</span>
+          <span class="badge">Draft</span>
+        </div>
+      </section>
+
+      <!-- =================== Section Alertes =================== -->
       <section id="section-alertes">
         <h2>Alertes</h2>
-        <div class="alert alert--success" role="status">
-          <p>Demande envoyée</p>
+
+        <div class="alert alert--info">
+          <p><span class="alert__title"> Information</span></p>
+        </div>
+        <div class="alert alert--success">
+          <p><span class="alert__title">Success</span> Demande envoyée</p>
         </div>
 
-        <div class="alert alert--warning" role="alert">
-          <p>Le format de votre fichier n'est pas supporté</p>
+        <div class="alert alert--warning">
+          <p>
+            <span class="alert__title">Attention</span> Le format de votre
+            fichier n'est pas supporté
+          </p>
         </div>
 
-        <div class="alert alert--error" role="alert">
-          <p>Something went wrong. Try again</p>
+        <div class="alert alert--error">
+          <p>
+            <span class="alert__title">Erreur</span> Something went wrong. Try
+            again
+          </p>
         </div>
       </section>
-      <section id="section-cartes"></section>
+
+      <!-- =================== Section Cartes =================== -->
+      <section aria-labelledby="section-cartes">
+        <h2>Cartes</h2>
+        <div class="wrapper"></div>
+      </section>
     </main>
     <footer></footer>
 

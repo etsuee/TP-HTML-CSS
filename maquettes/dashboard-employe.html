@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Nom de la page - TechCorp RH</title>
+    <title>Tableau de bord - TechCorp RH</title>
     <meta
       name="description"
       content="Une phrase qui resume le contenu de la page."
@@ -15,7 +15,6 @@
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 
     <link rel="stylesheet" href="css/main.css" />
-    <script src="js/app.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#contenu">Aller au contenu principal</a>
@@ -58,10 +57,55 @@
 
         <main class="app__main" id="contenu" tabindex="-1">
             <div class="container">
-                <!-- A FAIRE (Etape 3 TP2) -->
+                <div class="page-header">
+                    <div>
+                        <h1>Bonjour Claire</h1>
+                        <p class="page-header__subtitle">Voici le résumé de votre activité.</p>
+                    </div>
+                    <div class="page-header__actions">
+                        <a class="btn btn--secondary" href="note-frais-nouvelle.html">Nouvelle note de frais</a>
+                        <a class="btn btn--primary" href="conges-demande.html">Demander un congé</a>
+                    </div>
+                </div>
+
+                <section aria-labelledby="soldes">
+                    <h2 class="sr-only" id="soldes">Mes soldes</h2>
+                    <ul class="grid-auto" role="list">
+                        <li class="card stat">
+                            <span class="stat__label">Congés payés restants</span>
+                            <span class="stat__value">20 jours</span>
+                            <div class="bar" aria-hidden="true"><div class="bar__fill" style="width: 66%"></div></div>
+                        </li>
+
+                        <li class="card stat">
+                            <span class="stat__label">RTT restants</span>
+                            <span class="stat__value">6 jours</span>
+                            <div class="bar" aria-hidden="true"><div class="bar__fill" style="width: 66%"></div></div>
+                        </li>
+
+                        <li class="card stat">
+                            <span class="stat__label">Note de frais en attente</span>
+                            <span class="stat__value">4</span>
+                        </li>
+
+                        <li class="card stat">
+                            <span class="stat__label">Matériel attribué</span>
+                            <span class="stat__value">3</span>
+                        </li>
+                    </ul>  
+                </section>
+
+
+
+
+
+
+
             </div>
  
         </main>
     </div>
+
+    <script src="js/app.js" defer></script>
   </body>
 </html>

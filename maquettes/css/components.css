@@ -260,6 +260,10 @@ Topbar
   text-decoration: none;
 }
 
+.brand__logo {
+  width: 2rem;
+  height: 2rem;
+}
 
 /* ================================== 
 Avatar - User 
@@ -297,6 +301,16 @@ Avatar - User
 .user__role {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
+}
+
+.topbar .user__info {
+  display: none;
+}
+
+@media (min-width: 40em) {
+  .topbar .user__info {
+    display: block;
+  }
 }
 
 

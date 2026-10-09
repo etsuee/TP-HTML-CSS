@@ -3,17 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <title>Tableau de bord - TechCorp RH</title>
-    <meta
-      name="description"
-      content="Une phrase qui resume le contenu de la page."
-    />
-
+    <meta name="description" content="Résumé de votre dashboard."/>
     <meta name="robots" content="noindex, nofollow" />
     <meta name="theme-color" content="#1d4ed8" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -22,9 +16,7 @@
     <div class="app">
         <header class="app__header topabar">
             <button class="topbar__menu" type="button" data-nav-toggle aria-expanded="false" aria-controls="navigation">
-                <svg class="anv__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
-                    <path d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
+                <svg class="nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
                 <span class="sr-only">Ouvrir le menu</span>
             </button> 
             
@@ -41,18 +33,24 @@
                         <p class="user__role">Développeuse</p>
                     </div>
                 </div>
+                <a class="icon-link" href="login.html">
+                    <svg class="nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"/></svg>
+                    <span class="sr-only">Se déconnecter</span>
+                </a>
             </div>
         </header>
 
         <nav class="app__sidebar sidebar" id="navigation" aria-label="Navigation principale">
-            <h2 class="nav__heading" id="nav-perso">Mon espace</h2>
-            <ul class="nav" role="list" aria-labelledby="nav-perso">
-                <li><a class="nav__link" href="dashboard-employe.html" aria-current="page">Tableau de bord</a></li>
-                <li><a class="nav__link" href="conges-demande.html">Mes congés</a></li>
-                <li><a class="nav__link" href="note-frais-nouvelle.html">Notes de frais</a></li>
-                <li><a class="nav__link" href="materiel.html">Matériel</a></li>
-                <li><a class="nav__link" href="profil.html">Mon profil</a></li>
-            </ul>
+            <div class="nav__section">
+                <h2 class="nav__heading" id="nav-perso">Mon espace</h2>
+                <ul class="nav" role="list" aria-labelledby="nav-perso">
+                    <li><a class="nav__link" href="dashboard-employe.html" aria-current="page">Tableau de bord</a></li>
+                    <li><a class="nav__link" href="conges-demande.html">Mes congés</a></li>
+                    <li><a class="nav__link" href="note-frais-nouvelle.html">Notes de frais</a></li>
+                    <li><a class="nav__link" href="materiel.html">Matériel</a></li>
+                    <li><a class="nav__link" href="profil.html">Mon profil</a></li>
+                </ul>
+            </div> 
         </nav>
 
         <main class="app__main" id="contenu" tabindex="-1">
@@ -60,7 +58,7 @@
                 <div class="page-header">
                     <div>
                         <h1>Bonjour Claire</h1>
-                        <p class="page-header__subtitle">Voici le résumé de votre activité.</p>
+                        <p class="page-header__subtitle">Voici le résumé de votre activité au 8 octobre 2026.</p>
                     </div>
                     <div class="page-header__actions">
                         <a class="btn btn--secondary" href="note-frais-nouvelle.html">Nouvelle note de frais</a>
@@ -68,24 +66,26 @@
                     </div>
                 </div>
 
-                <section aria-labelledby="soldes">
-                    <h2 class="sr-only" id="soldes">Mes soldes</h2>
-                    <ul class="grid-auto" role="list">
+                <section aria-labelledby="titre-soldes">
+                    <h2 class="sr-only" id="titre-soldes">Mes soldes</h2>
+                    <ul class="grid-auto list" role="list">
                         <li class="card stat">
                             <span class="stat__label">Congés payés restants</span>
-                            <span class="stat__value">20 jours</span>
-                            <div class="bar" aria-hidden="true"><div class="bar__fill" style="width: 66%"></div></div>
+                            <span class="stat__value">14 <span class="stat__unit">jours</span></span>
+                            <div class="bar" aria-hidden="true"><div class="bar__fill" style="width: 56%"></div></div>
+                            <span class="stat__hint">8 pris, 3 en attentes, sur 25</span>
                         </li>
 
                         <li class="card stat">
                             <span class="stat__label">RTT restants</span>
-                            <span class="stat__value">6 jours</span>
+                            <span class="stat__value">6 <span class="stat__unit">jours</span></span>
                             <div class="bar" aria-hidden="true"><div class="bar__fill" style="width: 66%"></div></div>
+                            <span class="stat__hint">4 pris sur 10</span>
                         </li>
 
                         <li class="card stat">
                             <span class="stat__label">Note de frais en attente</span>
-                            <span class="stat__value">4</span>
+                            <span class="stat__value">89,50</span>
                         </li>
 
                         <li class="card stat">
@@ -96,35 +96,104 @@
                 </section>
 
                 <div class="grid-split">
-                    <section class="card" aria-labelledby="absences">
-                        <h2 id="absences">Mes prochaines absences</h2>
+                    <section class="card" aria-labelledby="titre-absences">
+                        <div>
+                            <h2 id="absences" class="card__title">Mes prochaines absences</h2>
+                        </div>
                         <ul class="list" role="list">
                             <li class="list__item">
-                                <span>Congés payés du 8 au 15 octobre</span>
+                                <div>
+                                    <p class="font-semibold">Congés payés, 5 jours</p>
+                                    <p class="list__meta">
+                                        Du <time datetime="2026-10-26">lundi 26</time>
+                                        au <time datetime="2026-10-30">vendredi 30 octobre</time>
+                                    </p>
+                                </div>
                                 <span class="badge badge--approved">Validé</span>
                             </li>
 
-                             <li class="list__item">
-                                <span>RTT du 24 au 26 octobre</span>
-                                <span class="badge badge--pending">En attente</span>
+                            <li class="list__item">
+                                <div>
+                                    <p class="font-semibold">RTT, 2 jours</p>
+                                    <p class="list__meta">Le <time datetime="2026-11-13">vendredi 13 novembre 2026</time></p>
+                                </div>
+                                <span class="badge badge--pending">En attente manager</span>
                             </li>
                         </ul>
                     </section>
 
-
-
-
-                    
+                    <section class="card" aria-labelledby="titre-materiel">
+                        <div class="card__header">
+                            <h2 id="titre-materiel" class="card__title">Mon matériel</h2>                        
+                        </div>
+                        
+                        <ul class="list" role="list">
+                            <li class="list__item">
+                                <div>
+                                    <span>Acer Nitro 5</span>
+                                    <p class="list__meta">N° de série AB123456789</p>
+                                </div>
+                            </li>
+                                
+                            <li class="list__item">
+                                <div>
+                                    <span>Acer Nitro 5</span>
+                                    <p class="list__meta">N° de série AB123456789</p>
+                                </div>
+                            </li>    
+                            
+                            <li class="list__item">
+                                <div>
+                                    <span>Acer Nitro 5</span>
+                                    <p class="list__meta">N° de série AB123456789</p>
+                                </div>
+                            </li> 
+                        </ul>
+                    </section>
                 </div>
 
-
-
-
-
-
-
+                <section aria-labelledby="titre-frais">
+                    <div>
+                        <h2 id="titre-frais" class="card__title">Mes dernières notes de frais</h2>
+                    </div>
+                    <div class="table-wrapper">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Desription</th>
+                                    <th scope="col">Type</th>
+                                    <th scope="col">Montant</th>
+                                    <th scope="col">Statut</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><time datatime="12/09/2026"></time></td>
+                                    <td>Train Lyon - Paris, salon Devoxx</td>
+                                    <td>Transport</td>
+                                    <td>89,50 €</td>
+                                    <td><span class="badge badge--pending">En attente manager</span></td>
+                                </tr>
+                                <tr>
+                                    <td><time datatime="12/09/2026"></time></td>
+                                    <td>Train Lyon - Paris, salon Devoxx</td>
+                                    <td>Transport</td>
+                                    <td>89,50 €</td>
+                                    <td><span class="badge badge--approved">Validé</span></td>
+                                </tr>
+                                <tr>
+                                    <td><time datatime="12/09/2026"></time></td>
+                                    <td>Train Lyon - Paris, salon Devoxx</td>
+                                    <td>Transport</td>
+                                    <td>89,50 €</td>
+                                    <td><span class="badge badge--refunded">Remboursé</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>    
             </div>
- 
         </main>
     </div>
 
